@@ -1,0 +1,31 @@
+<nav class="navbar sticky-top navbar-expand-lg nav justify-content-end" style="background-color: #ffffff;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://res.cloudinary.com/project-yelp/image/upload/v1668107207/Yelpcamp/AAW_Logo_-_Original_-_5000x5000_jvxgy2.png"
+                alt="" width="100" height="60">
+        </a> <button class="navbar-toggler" style="background-color: none" type="button" data-toggle="collapse"
+            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <div class="menu"></div>
+            <div class="menu"></div>
+            <div class="menu"></div>
+            <span class="navbar-toggler-icon" style="background-color:none"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/campgrounds">Campgrounds</a>
+                <a class="nav-link" href="/campgrounds/new">New Campground</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <% if(!currentUser) {%>
+                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="/register">Register</a>
+                    <% } else {%>
+                        <a class="nav-link" href="/logout">Logout</a>
+                        <% } %>
+            </div>
+
+        </div>
+    </div>
+</nav>
